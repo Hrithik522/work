@@ -1,0 +1,15 @@
+import numpy as np
+from scipy.stats import spearmanr
+
+# SMIP scores
+smip_scores = np.array([70, 46, 94, 34, 20, 86, 18, 12, 56, 64])
+
+# DBMS scores
+dbms_scores = np.array([60, 66, 90, 46, 16, 98, 24, 8, 32, 54])
+
+# Calculate Spearman correlation coefficient and p-value
+corr_coef, p_value = spearmanr(smip_scores, dbms_scores)
+
+# Print the results
+print("Spearman correlation coefficient:", corr_coef)
+print("P-value:", p_value)
